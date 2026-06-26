@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="falling petals">
+  <g opacity=".86">
+    <path d="M34 34 C58 28 70 45 66 65 C44 69 28 56 34 34Z" fill="#ffaccd"/>
+    <path d="M145 25 C165 17 184 29 185 52 C164 60 145 49 145 25Z" fill="#fff7fb"/>
+    <path d="M225 78 C242 71 255 82 254 101 C236 107 222 97 225 78Z" fill="#ff8fbd"/>
+    <path d="M84 116 C105 108 124 122 122 145 C100 151 82 139 84 116Z" fill="#ffd8e5"/>
+    <path d="M190 158 C211 149 229 162 228 184 C207 191 188 180 190 158Z" fill="#fff0c8"/>
+    <path d="M47 210 C68 202 84 215 82 236 C61 242 45 230 47 210Z" fill="#ff9fc1"/>
+  </g>
+</svg>

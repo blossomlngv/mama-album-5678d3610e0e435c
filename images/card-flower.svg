@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="small pink flower">
+  <ellipse cx="40" cy="20" rx="13" ry="22" fill="#ff8fbd"/>
+  <ellipse cx="59" cy="34" rx="13" ry="22" fill="#ffc3d8" transform="rotate(72 59 34)"/>
+  <ellipse cx="52" cy="56" rx="13" ry="22" fill="#ff9fc1" transform="rotate(144 52 56)"/>
+  <ellipse cx="28" cy="56" rx="13" ry="22" fill="#fff6fa" transform="rotate(216 28 56)"/>
+  <ellipse cx="21" cy="34" rx="13" ry="22" fill="#ffaccd" transform="rotate(288 21 34)"/>
+  <circle cx="40" cy="40" r="10" fill="#fff0c8"/>
+  <circle cx="40" cy="40" r="4" fill="#d7a84f"/>
+</svg>

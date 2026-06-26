@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 170" role="img" aria-label="pink floral crown">
+  <defs>
+    <filter id="shadow" x="-10%" y="-30%" width="120%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#c54d85" flood-opacity=".16"/>
+    </filter>
+    <g id="blossom">
+      <ellipse cx="0" cy="-14" rx="13" ry="23" fill="#ff8fbd"/>
+      <ellipse cx="14" cy="-4" rx="13" ry="23" fill="#ffc3d8" transform="rotate(72 14 -4)"/>
+      <ellipse cx="9" cy="12" rx="13" ry="23" fill="#ff9fc1" transform="rotate(144 9 12)"/>
+      <ellipse cx="-9" cy="12" rx="13" ry="23" fill="#ffd8e5" transform="rotate(216 -9 12)"/>
+      <ellipse cx="-14" cy="-4" rx="13" ry="23" fill="#ffaccd" transform="rotate(288 -14 -4)"/>
+      <circle r="8" fill="#fff0c8"/>
+      <circle r="3.8" fill="#d7a84f"/>
+    </g>
+    <g id="daisy">
+      <ellipse cx="0" cy="-11" rx="10" ry="18" fill="#fff"/>
+      <ellipse cx="11" cy="-3" rx="10" ry="18" fill="#fff7fb" transform="rotate(72 11 -3)"/>
+      <ellipse cx="7" cy="10" rx="10" ry="18" fill="#fff" transform="rotate(144 7 10)"/>
+      <ellipse cx="-7" cy="10" rx="10" ry="18" fill="#fff7fb" transform="rotate(216 -7 10)"/>
+      <ellipse cx="-11" cy="-3" rx="10" ry="18" fill="#fff" transform="rotate(288 -11 -3)"/>
+      <circle r="7" fill="#ffd36d"/>
+    </g>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M42 120 C174 39 449 38 578 120" fill="none" stroke="#91b66b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M76 117 C205 60 419 60 544 117" fill="none" stroke="#b8cf7b" stroke-width="4" stroke-linecap="round"/>
+    <g fill="#91b66b">
+      <ellipse cx="98" cy="105" rx="28" ry="10" transform="rotate(-22 98 105)"/>
+      <ellipse cx="160" cy="78" rx="26" ry="9" transform="rotate(18 160 78)"/>
+      <ellipse cx="236" cy="62" rx="26" ry="9" transform="rotate(-12 236 62)"/>
+      <ellipse cx="380" cy="62" rx="26" ry="9" transform="rotate(12 380 62)"/>
+      <ellipse cx="460" cy="80" rx="26" ry="9" transform="rotate(-18 460 80)"/>
+      <ellipse cx="526" cy="105" rx="28" ry="10" transform="rotate(22 526 105)"/>
+    </g>
+    <use href="#blossom" x="148" y="82" transform="scale(1.08)"/>
+    <use href="#daisy" x="214" y="60" transform="rotate(-10 214 60) scale(.95)"/>
+    <use href="#blossom" x="310" y="53" transform="scale(1.2)"/>
+    <use href="#daisy" x="405" y="61" transform="rotate(12 405 61) scale(.95)"/>
+    <use href="#blossom" x="474" y="84" transform="rotate(10 474 84) scale(1.05)"/>
+    <use href="#daisy" x="86" y="113" transform="rotate(-24 86 113) scale(.82)"/>
+    <use href="#daisy" x="535" y="113" transform="rotate(24 535 113) scale(.82)"/>
+  </g>
+</svg>

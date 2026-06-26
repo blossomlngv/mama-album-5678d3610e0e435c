@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-label="pink flower bouquet">
+  <defs>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#c54d85" flood-opacity=".18"/>
+    </filter>
+    <g id="flower-pink">
+      <ellipse cx="0" cy="-22" rx="20" ry="34" fill="#ff8fbd"/>
+      <ellipse cx="21" cy="-7" rx="20" ry="34" fill="#ffaccd" transform="rotate(72 21 -7)"/>
+      <ellipse cx="13" cy="18" rx="20" ry="34" fill="#ff7faf" transform="rotate(144 13 18)"/>
+      <ellipse cx="-13" cy="18" rx="20" ry="34" fill="#ffc3d8" transform="rotate(216 -13 18)"/>
+      <ellipse cx="-21" cy="-7" rx="20" ry="34" fill="#ff9fc1" transform="rotate(288 -21 -7)"/>
+      <circle r="14" fill="#fff0c8"/>
+      <circle r="6" fill="#d7a84f"/>
+    </g>
+    <g id="flower-white">
+      <ellipse cx="0" cy="-18" rx="16" ry="28" fill="#fff"/>
+      <ellipse cx="17" cy="-5" rx="16" ry="28" fill="#fff6fa" transform="rotate(72 17 -5)"/>
+      <ellipse cx="10" cy="15" rx="16" ry="28" fill="#fff" transform="rotate(144 10 15)"/>
+      <ellipse cx="-10" cy="15" rx="16" ry="28" fill="#fff6fa" transform="rotate(216 -10 15)"/>
+      <ellipse cx="-17" cy="-5" rx="16" ry="28" fill="#fff" transform="rotate(288 -17 -5)"/>
+      <circle r="11" fill="#ffd36d"/>
+    </g>
+    <g id="leaf">
+      <path d="M0 0 C38 -30 72 -20 88 6 C54 22 24 20 0 0Z" fill="#96b96d"/>
+      <path d="M8 0 C34 -8 54 -5 78 5" fill="none" stroke="#6e9954" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+  <g filter="url(#soft-shadow)">
+    <path d="M151 231 C148 185 145 142 120 90" fill="none" stroke="#84a75e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M164 231 C166 182 176 137 214 79" fill="none" stroke="#84a75e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M157 232 C164 185 156 140 160 66" fill="none" stroke="#84a75e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M142 234 C128 190 100 156 70 126" fill="none" stroke="#84a75e" stroke-width="7" stroke-linecap="round"/>
+    <path d="M178 232 C190 191 218 160 252 134" fill="none" stroke="#84a75e" stroke-width="7" stroke-linecap="round"/>
+    <use href="#leaf" x="102" y="154" transform="rotate(158 102 154) scale(.72)"/>
+    <use href="#leaf" x="196" y="145" transform="rotate(18 196 145) scale(.76)"/>
+    <use href="#leaf" x="132" y="192" transform="rotate(198 132 192) scale(.56)"/>
+    <use href="#leaf" x="182" y="198" transform="rotate(-26 182 198) scale(.58)"/>
+    <use href="#flower-pink" x="160" y="61" transform="scale(1.05)"/>
+    <use href="#flower-white" x="111" y="89" transform="rotate(-14 111 89) scale(.92)"/>
+    <use href="#flower-pink" x="218" y="90" transform="rotate(18 218 90) scale(.86)"/>
+    <use href="#flower-white" x="72" y="125" transform="rotate(-20 72 125) scale(.76)"/>
+    <use href="#flower-pink" x="253" y="132" transform="rotate(24 253 132) scale(.72)"/>
+    <path d="M113 220 C134 237 187 237 207 219 C183 211 138 211 113 220Z" fill="#ffbdd4"/>
+    <path d="M116 220 C138 228 184 229 204 220" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+  </g>
+</svg>
