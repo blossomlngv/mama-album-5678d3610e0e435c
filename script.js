@@ -19,18 +19,11 @@ const HERO_PHOTO = "images/mama/mama.jpg";
 /*
   編集ポイント 3:
   最後のメッセージ前に流す全体写真です。
-  images フォルダに 全体1.jpg 〜 全体7.jpg を入れると、1から順に表示されます。
-  png や jpeg にしたい場合は、下の拡張子だけ変更してください。
+  images/group フォルダに 全体1.jpg 〜 全体84.jpg を入れています。
+  枚数を増減したい場合は、下の 84 の数字を変更してください。
+  表示順はページを開くたびにランダムになります。
 */
-const endingPhotos = [
-  "images/group/全体1.jpg",
-  "images/group/全体2.jpg",
-  "images/group/全体3.jpg",
-  "images/group/全体4.jpg",
-  "images/group/全体5.jpg",
-  "images/group/全体6.jpg",
-  "images/group/全体7.jpg"
-];
+const endingPhotos = Array.from({ length: 84 }, (_, index) => `images/group/全体${index + 1}.jpg`);
 
 /*
   編集ポイント 4:
@@ -248,7 +241,7 @@ Instagramの投稿に綴らせて貰いましたが、
     name: "のん",
     message: `お誕生日おめでとうございます
 今年も幸せな一年にしてください🍀`,
-    photos: []
+    photos: ["images/members/のん/のん.jpg"]
   },
   {
     id: "member-16",
@@ -355,6 +348,7 @@ const lightboxNext = document.querySelector("#lightboxNext");
 
 let lightboxPhotos = [];
 let lightboxIndex = 0;
+let activeEndingPhotos = [];
 let endingCelebrated = false;
 let lockTimer = null;
 let touchStartX = 0;
@@ -405,6 +399,15 @@ function photoCountClass(count) {
   return "has-many-photos";
 }
 
+function shufflePhotos(photos) {
+  const shuffled = photos.slice();
+  for (let index = shuffled.length - 1; index > 0; index--) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
 function memberToneClass(member) {
   return member.tone === "male" ? "is-male" : "";
 }
@@ -432,12 +435,7 @@ function renderAlbum() {
             </button>
           `).join("")}
         </div>`
-      : `<div class="empty-photo" aria-label="写真は後から追加できます">
-          <div>
-            <span>${escapeHtml(getInitial(member.name))}</span>
-            写真は images フォルダへ追加できます
-          </div>
-        </div>`;
+      : "";
 
     return `
       <section id="${escapeHtml(member.id)}" class="member-section section-observe" data-title="${escapeHtml(member.name)}">
@@ -490,7 +488,8 @@ function setupAdaptivePhotoLayouts() {
 function renderEndingPhotos() {
   if (!endingPhotoTrack) return;
 
-  const photos = endingPhotos.filter(Boolean);
+  const photos = shufflePhotos(endingPhotos.filter(Boolean));
+  activeEndingPhotos = photos;
   if (!photos.length) {
     endingPhotoTrack.innerHTML = `
       <div class="ending-photo-empty">
@@ -575,10 +574,10 @@ function openLightbox(memberIndex, photoIndex) {
 }
 
 function openEndingPhoto(photoIndex) {
-  if (!endingPhotos.length) return;
-  lightboxPhotos = endingPhotos.map((src, index) => ({
+  if (!activeEndingPhotos.length) return;
+  lightboxPhotos = activeEndingPhotos.map((src, index) => ({
     src,
-    caption: `みんなとの思い出 / ${index + 1} of ${endingPhotos.length}`
+    caption: `みんなとの思い出 / ${index + 1} of ${activeEndingPhotos.length}`
   }));
   lightboxIndex = photoIndex;
   showLightboxPhoto();
