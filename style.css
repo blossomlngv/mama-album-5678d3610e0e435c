@@ -963,7 +963,7 @@ input {
   width: max-content;
   gap: 14px;
   padding-inline: 20px;
-  animation: memoryFlow 34s linear infinite;
+  animation: memoryFlow 240s linear infinite;
 }
 
 .ending-photo-track:active .ending-photo-rail {
@@ -1327,6 +1327,291 @@ input {
   height: 28px;
   background: url("images/floral-border.svg") center / contain no-repeat;
   opacity: 0.72;
+}
+
+/* Deep red theme: Pureロゴに寄せた、落ち着いたワインレッドの上書き */
+html {
+  background: #3e0f13;
+}
+
+body {
+  color: #fff7ee;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255, 225, 198, 0.34), transparent 18rem),
+    radial-gradient(circle at 82% 18%, rgba(213, 84, 73, 0.32), transparent 23rem),
+    radial-gradient(circle at 52% 74%, rgba(255, 187, 146, 0.22), transparent 24rem),
+    linear-gradient(145deg, #2b070b 0%, #5d161c 34%, #8b2227 68%, #3a0b10 100%);
+}
+
+.ambient::after {
+  background:
+    linear-gradient(120deg, transparent 0 36%, rgba(255, 231, 205, 0.17) 46%, transparent 58% 100%),
+    radial-gradient(circle at 50% 12%, rgba(255, 214, 180, 0.18), transparent 24rem);
+  opacity: 0.7;
+}
+
+.glow-one {
+  background: rgba(109, 18, 26, 0.82);
+}
+
+.glow-two {
+  background: rgba(245, 174, 105, 0.38);
+}
+
+.glow-three {
+  background: rgba(146, 31, 39, 0.54);
+}
+
+.lock-screen,
+.hero,
+.contents,
+.member-section,
+.memory-flow,
+.ending {
+  background:
+    radial-gradient(circle at 20% 12%, rgba(255, 226, 202, 0.24), transparent 18rem),
+    radial-gradient(circle at 82% 30%, rgba(189, 48, 52, 0.30), transparent 22rem),
+    radial-gradient(circle at 50% 100%, rgba(255, 188, 130, 0.14), transparent 22rem),
+    linear-gradient(150deg, #32080d 0%, #651820 46%, #9a2a2e 100%);
+}
+
+.contents,
+.member-section:nth-of-type(even),
+.memory-flow {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 236, 212, 0.20), transparent 20rem),
+    radial-gradient(circle at 84% 80%, rgba(174, 38, 46, 0.30), transparent 22rem),
+    linear-gradient(150deg, #3a0a10 0%, #721a24 54%, #461015 100%);
+}
+
+.hero::before,
+.contents::before,
+.member-section::before,
+.memory-flow::before {
+  border-color: rgba(255, 215, 183, 0.32);
+  background:
+    radial-gradient(circle at 22px 22px, rgba(255, 238, 216, 0.58) 0 6px, transparent 7px),
+    radial-gradient(circle at calc(100% - 22px) 22px, rgba(255, 172, 145, 0.42) 0 8px, transparent 9px),
+    radial-gradient(circle at 22px calc(100% - 22px), rgba(255, 229, 181, 0.42) 0 8px, transparent 9px),
+    radial-gradient(circle at calc(100% - 22px) calc(100% - 22px), rgba(255, 145, 137, 0.42) 0 7px, transparent 8px),
+    linear-gradient(145deg, rgba(255, 246, 235, 0.08), rgba(74, 10, 16, 0.04));
+}
+
+.hero::after,
+.ending::after,
+.memory-flow::after {
+  background: linear-gradient(transparent, rgba(43, 7, 11, 0.66));
+}
+
+.lock-panel,
+.member-wrap,
+.message-box,
+.nav-card,
+.ending-card {
+  color: #4c1217;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.72), transparent 12rem),
+    linear-gradient(145deg, rgba(255, 248, 237, 0.94), rgba(255, 226, 206, 0.86));
+  border-color: rgba(255, 211, 171, 0.48);
+  box-shadow:
+    0 22px 54px rgba(43, 7, 11, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.36);
+}
+
+.lock-panel h1,
+.hero h1,
+.section-head h2,
+.member-title h2,
+.memory-inner h2,
+.ending h2 {
+  color: #fff1df;
+  text-shadow:
+    0 2px 0 rgba(65, 10, 14, 0.28),
+    0 14px 32px rgba(43, 7, 11, 0.54);
+}
+
+.lock-panel h1,
+.member-title h2,
+.section-head h2,
+.memory-inner h2,
+.ending h2 {
+  color: #781d24;
+  text-shadow: 0 10px 26px rgba(255, 235, 215, 0.46);
+}
+
+.hero h1 {
+  color: #fff2df;
+}
+
+.eyebrow,
+.section-head p,
+.member-title p,
+.memory-copy,
+.hero-message,
+.ending p,
+.ending strong {
+  color: rgba(255, 240, 222, 0.90);
+}
+
+.hero-message {
+  width: min(100%, 520px);
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 218, 184, 0.34);
+  border-radius: 18px;
+  background: rgba(58, 10, 16, 0.38);
+  backdrop-filter: blur(10px);
+  text-shadow: 0 2px 10px rgba(43, 7, 11, 0.34);
+}
+
+.lock-panel .eyebrow,
+.member-wrap .member-title p {
+  color: rgba(86, 19, 25, 0.72);
+  text-shadow: none;
+}
+
+.lock-panel h1 {
+  color: #781d24;
+}
+
+.member-wrap {
+  color: #fff4e5;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.member-wrap .member-title h2 {
+  color: #fff1df;
+  text-shadow:
+    0 2px 0 rgba(65, 10, 14, 0.28),
+    0 14px 32px rgba(43, 7, 11, 0.54);
+}
+
+.member-wrap .member-title p {
+  color: rgba(255, 232, 208, 0.82);
+}
+
+.member-wrap.is-male .member-title h2,
+.member-wrap.is-male .member-title p {
+  color: #cfe7ff;
+}
+
+.member-wrap .message-box {
+  color: #4c1217;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.74), transparent 12rem),
+    linear-gradient(145deg, rgba(255, 248, 237, 0.96), rgba(255, 226, 206, 0.90));
+  border-color: rgba(255, 211, 171, 0.48);
+  box-shadow:
+    0 18px 42px rgba(43, 7, 11, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.34);
+}
+
+.member-wrap.is-male .message-box {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.76), transparent 12rem),
+    linear-gradient(145deg, rgba(244, 250, 255, 0.96), rgba(217, 237, 255, 0.90));
+}
+
+.hero-photo-frame,
+.photo-button,
+.ending-photo-button {
+  background:
+    linear-gradient(#fffaf2, #fffaf2) padding-box,
+    linear-gradient(135deg, #6c141b, #d6a45d, #b9363c) border-box;
+  box-shadow:
+    0 22px 50px rgba(43, 7, 11, 0.34),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.56);
+}
+
+.message-box {
+  border-left-color: rgba(139, 34, 39, 0.34);
+}
+
+.message-box p,
+.ending-card p,
+.lock-copy {
+  color: rgba(57, 12, 16, 0.88);
+  font-family: "Yu Gothic", "Hiragino Sans", "Meiryo", sans-serif;
+  font-weight: 600;
+  line-height: 2.05;
+  text-shadow: none;
+}
+
+.member-wrap.message-long .message-box p {
+  line-height: 1.98;
+}
+
+.nav-card span,
+.nav-card small {
+  color: #57131a;
+}
+
+.nav-card.is-active,
+.nav-card:hover {
+  border-color: rgba(118, 26, 32, 0.48);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.82), transparent 8rem),
+    linear-gradient(135deg, rgba(255, 246, 235, 0.98), rgba(255, 205, 184, 0.90));
+}
+
+.current-chip,
+.top-button,
+.password-form button {
+  color: #fff4e5;
+  background: linear-gradient(135deg, #5b1117, #9a2a2e 54%, #c98b57);
+  box-shadow: 0 14px 32px rgba(43, 7, 11, 0.28);
+}
+
+.current-person {
+  position: fixed;
+  top: max(14px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  max-width: min(42vw, 150px);
+  color: #fff4e5;
+  background: rgba(61, 10, 16, 0.72);
+  border-color: rgba(255, 219, 187, 0.36);
+  box-shadow: 0 12px 28px rgba(43, 7, 11, 0.24);
+}
+
+.password-form input {
+  color: #431015;
+  background: rgba(255, 248, 239, 0.92);
+}
+
+.password-error {
+  color: #ffd2c4;
+}
+
+.scroll-cue {
+  border-color: rgba(255, 224, 194, 0.58);
+}
+
+.scroll-cue span,
+.progress span {
+  background: linear-gradient(90deg, #5d161c, #a72d32, #e0aa63);
+  box-shadow: 0 0 18px rgba(255, 203, 150, 0.68);
+}
+
+.contents .section-head h2,
+.memory-inner h2 {
+  color: #fff0cf;
+  text-shadow:
+    0 2px 0 rgba(60, 8, 12, 0.40),
+    0 0 18px rgba(255, 215, 164, 0.40),
+    0 18px 34px rgba(43, 7, 11, 0.58);
+}
+
+.contents .section-head p,
+.memory-inner .eyebrow,
+.memory-copy {
+  color: rgba(255, 238, 213, 0.92);
+  text-shadow: 0 8px 22px rgba(43, 7, 11, 0.42);
+}
+
+.contents .section-head,
+.memory-inner {
+  text-shadow: none;
 }
 
 @media (min-width: 720px) {
