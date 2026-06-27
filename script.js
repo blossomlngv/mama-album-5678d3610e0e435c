@@ -507,7 +507,7 @@ function renderEndingPhotos() {
         return `
           <button class="ending-photo-button" type="button" data-ending-photo-index="${photoIndex}" aria-label="全体写真${photoIndex + 1}を拡大">
             <span class="ending-photo-placeholder">全体${photoIndex + 1}</span>
-            <img src="${escapeHtml(photo)}" alt="全体写真 ${photoIndex + 1}" loading="lazy" draggable="false">
+            <img src="${escapeHtml(photo)}" alt="全体写真 ${photoIndex + 1}" loading="eager" decoding="async" draggable="false">
           </button>
         `;
       }).join("")}
